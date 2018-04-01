@@ -1,0 +1,19 @@
+{
+  "useMinify": false,
+  "baseUrl": "https://ardoise.potagerspartages.ca",
+  "db": {
+    "database": "popa",
+    "user": "popa",
+    "password": "popa",
+    "options": {
+      "dialect" : "sqlite",
+      "host": "localhost",
+      "storage": "./popa.sqlite",
+      "logging": false
+    }
+  },
+  "authentication":{
+    "jwtSecret": "secret"
+  },
+  "sendgrid": "mock"
+}

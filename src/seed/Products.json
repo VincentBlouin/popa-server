@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Panier libre",
+    "description": "",
+    "unitPrice": "-350",
+    "nbInStock": -1,
+    "isAvailable": true,
+    "type": "adminOnly"
+  },
+  {
+    "name": "Rabiole",
+    "format": "paquet de 5 environ",
+    "description": "Bon à croquer",
+    "unitPrice": "2.5",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Turnip_2622027.jpg",
+    "nbInStock": 25,
+    "isAvailable": true,
+    "type": "open"
+  },
+  {
+    "name": "Carotte",
+    "format": "en bunch avec les feuilles",
+    "description": "très sucrée !",
+    "unitPrice": "3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Daucus_Carota.jpg",
+    "nbInStock": 10,
+    "isAvailable": true,
+    "type": "open"
+  },
+  {
+    "name": "Choux pomme",
+    "format": "unitée",
+    "description": "choux typique au Québec",
+    "unitPrice": "3",
+    "image": "http://allomaigrirvite.com/wp-content/uploads/2013/04/r%C3%A9gime-soupe-aux-choux.jpg",
+    "nbInStock": 5,
+    "isAvailable": false,
+    "type": "open"
+  },
+  {
+    "name": "Choux chinois",
+    "description": "Elle est voisine du bok choy (Brassica rapa L. subsp. chinensis), ou pak choï ou encore paksoy, lui aussi appelé chou chinois, aux côtes plus fournies et aux grandes feuilles vertes.",
+    "unitPrice": "2.5",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/ChineseCabbage.jpg",
+    "nbInStock": 12,
+    "isAvailable": false,
+    "type": "open"
+  },
+  {
+    "name": "Tomates cerises",
+    "format": "dans un petit panier",
+    "description": "Succulentes",
+    "unitPrice": "6",
+    "image": "https://www.promessedefleurs.com/media/catalog/product/cache/1/image/615x/9df78eab33525d08d6e5fb8d27136e95/T/o/Tomate-Supersweet-100-F1-4245-1_1.jpg",
+    "nbInStock": 10,
+    "isAvailable": false,
+    "type": "open"
+  },
+  {
+    "name": "Tomate",
+    "format": "Paquet de 4",
+    "description": "Oui !",
+    "unitPrice": "4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Tomatoes_plain_and_sliced.jpg",
+    "nbInStock": 15,
+    "isAvailable":  false,
+    "type": "open"
+  }
+]

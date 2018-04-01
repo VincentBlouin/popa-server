@@ -1,0 +1,12 @@
+[
+  {
+    "UserId": 3,
+    "totalPrice": -350,
+    "balance": 350
+  },
+  {
+    "UserId": 3,
+    "totalPrice": 16.65,
+    "balance": 333.35
+  }
+]

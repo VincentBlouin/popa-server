@@ -1,0 +1,45 @@
+[
+  {
+    "email": "a1@popa.ca",
+    "password": "12345678",
+    "status": "admin",
+    "firstName": "Ad",
+    "lastName": "Min",
+    "locale": "fr"
+  },
+  {
+    "email": "ardoise1@popa.ca",
+    "password": "12345678",
+    "status": "ardoise",
+    "firstName": "Ar",
+    "lastName": "Doise",
+    "locale": "fr"
+  },
+  {
+    "email": "m1@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "1",
+    "locale": "fr",
+    "ardoiseIdentifier": "rabiole12"
+  },
+  {
+    "email": "m2@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "2",
+    "locale": "en",
+    "ardoiseIdentifier": "cassis44"
+  },
+  {
+    "email": "vincent.blouin@gmail.com",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Vincent",
+    "lastName": "Blouin",
+    "locale": "fr",
+    "ardoiseIdentifier": "morille8"
+  }
+]
