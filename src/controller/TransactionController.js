@@ -50,14 +50,14 @@ module.exports = {
         }
         item.totalPrice = item.unitPrice * item.quantity
         if (user.status === 'subscribed') {
-          const rebate = (item.totalPrice * REBATE_RATIO).toFixed(2)
-          item.totalPriceAfterRebate = (item.totalPrice - rebate).toFixed(2)
+          const rebate = parseFloat(item.totalPrice * REBATE_RATIO).toFixed(2)
+          item.totalPriceAfterRebate = parseFloat(item.totalPrice - rebate).toFixed(2)
           item.rebates = [{
             amount: rebate,
             code: SUBSCRIBER_REBATE_CODE
           }]
         } else {
-          item.totalPriceAfterRebate = item.totalPrice.toFixed(2)
+          item.totalPriceAfterRebate = parseFloat(item.totalPrice).toFixed(2)
         }
         item.ProductId = item.id
         item.id = null
@@ -75,8 +75,9 @@ module.exports = {
       }).then(function (latestTransactions) {
         models.sequelize.transaction(function (t) {
           return Transactions.create({
-            totalPrice: totalPrice.toFixed(2),
-            balance: (latestTransactions[0].balance - totalPrice).toFixed(2)
+            totalPrice: parseFloat(totalPrice).toFixed(2),
+            balance: parseFloat(latestTransactions[0].balance - totalPrice).toFixed(2),
+            UserId: user.id
           }, {
             transaction: t
           }).then(function (_transaction) {
