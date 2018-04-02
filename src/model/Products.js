@@ -1,8 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('Products', {
-    name: DataTypes.STRING,
-    format: DataTypes.TEXT,
-    description: DataTypes.TEXT,
+    name: DataTypes.JSONB,
+    format: DataTypes.JSONB,
+    description: DataTypes.JSONB,
     unitPrice: DataTypes.DOUBLE,
     image: DataTypes.TEXT,
     nbInStock: DataTypes.INTEGER,

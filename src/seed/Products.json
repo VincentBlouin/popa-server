@@ -1,16 +1,24 @@
 [
   {
     "name": "Panier libre",
-    "description": "",
     "unitPrice": "-350",
     "nbInStock": -1,
     "isAvailable": true,
     "type": "adminOnly"
   },
   {
-    "name": "Rabiole",
-    "format": "paquet de 5 environ",
-    "description": "Bon à croquer",
+    "name": {
+      "fr": "Rabiole",
+      "en": "Rabish"
+    },
+    "format": {
+      "fr": "paquet de 5 environ",
+      "en": "pack of about 5"
+    },
+    "description": {
+      "fr": "Bon à croquer",
+      "en": "Good to eat"
+    },
     "unitPrice": "2.5",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Turnip_2622027.jpg",
     "nbInStock": 25,
@@ -18,9 +26,18 @@
     "type": "open"
   },
   {
-    "name": "Carotte",
-    "format": "en bunch avec les feuilles",
-    "description": "très sucrée !",
+    "name": {
+      "fr": "Carotte",
+      "en": "Carrot"
+    },
+    "format": {
+      "fr": "en bunch avec les feuilles",
+      "en": "in a bunch with the leaves"
+    },
+    "description": {
+      "fr": "très sucrée !",
+      "en": "Very sweet!"
+    },
     "unitPrice": "3",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Daucus_Carota.jpg",
     "nbInStock": 10,
@@ -28,9 +45,18 @@
     "type": "open"
   },
   {
-    "name": "Choux pomme",
-    "format": "unitée",
-    "description": "choux typique au Québec",
+    "name": {
+      "fr": "Choux pomme",
+      "en": "Apple cabbage"
+    },
+    "format": {
+      "fr": "unitée",
+      "en": "unit"
+    },
+    "description": {
+      "fr": "choux typique au Québec",
+      "en": "typical cabbage in Quebec"
+    },
     "unitPrice": "3",
     "image": "http://allomaigrirvite.com/wp-content/uploads/2013/04/r%C3%A9gime-soupe-aux-choux.jpg",
     "nbInStock": 5,
@@ -38,8 +64,14 @@
     "type": "open"
   },
   {
-    "name": "Choux chinois",
-    "description": "Elle est voisine du bok choy (Brassica rapa L. subsp. chinensis), ou pak choï ou encore paksoy, lui aussi appelé chou chinois, aux côtes plus fournies et aux grandes feuilles vertes.",
+    "name": {
+      "fr": "Choux chinois",
+      "en": "Chinese cabbage"
+    },
+    "description": {
+      "fr": "Elle est voisine du bok choy (Brassica rapa L. subsp. chinensis), ou pak choï ou encore paksoy, lui aussi appelé chou chinois, aux côtes plus fournies et aux grandes feuilles vertes.",
+      "en": "It is close to bok choy (Brassica rapa L. subsp. chinensis), or pak choï or paksoy, also called Chinese cabbage, with thicker ribs and large green leaves."
+    },
     "unitPrice": "2.5",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/ChineseCabbage.jpg",
     "nbInStock": 12,
@@ -47,9 +79,18 @@
     "type": "open"
   },
   {
-    "name": "Tomates cerises",
-    "format": "dans un petit panier",
-    "description": "Succulentes",
+    "name": {
+      "fr": "Tomates cerises",
+      "en": "Cherry tomatoes"
+    },
+    "format": {
+      "fr": "dans un petit panier",
+      "en": "in a small basket"
+    },
+    "description": {
+      "fr": "Succulentes",
+      "en": "Succulent"
+    },
     "unitPrice": "6",
     "image": "https://www.promessedefleurs.com/media/catalog/product/cache/1/image/615x/9df78eab33525d08d6e5fb8d27136e95/T/o/Tomate-Supersweet-100-F1-4245-1_1.jpg",
     "nbInStock": 10,
@@ -57,13 +98,22 @@
     "type": "open"
   },
   {
-    "name": "Tomate",
-    "format": "Paquet de 4",
-    "description": "Oui !",
+    "name": {
+      "fr": "Tomate",
+      "en": "Tomato"
+    },
+    "format": {
+      "fr": "Paquet de 4",
+      "en": "Pack of 4"
+    },
+    "description": {
+      "fr": "Oui !",
+      "en": "Yes !"
+    },
     "unitPrice": "4",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Tomatoes_plain_and_sliced.jpg",
     "nbInStock": 15,
-    "isAvailable":  false,
+    "isAvailable": false,
     "type": "open"
   }
 ]
