@@ -70,15 +70,21 @@ router.get(
 )
 
 router.get(
-  '/subscriber/:ownerId',
+  '/transaction/:ownerId',
   isOwnerArdoiseUserOrAdmin,
   TransactionController.list
 )
 
 router.post(
-  '/subscriber/:ownerId',
+  '/transaction/:ownerId',
   isOwnerArdoiseUserOrAdmin,
-  TransactionController.addTransaction
+  TransactionController.subscriberTransaction
+)
+
+router.post(
+  '/transaction',
+  isArdoiseUser,
+  TransactionController.anonymousTransaction
 )
 
 module.exports = router
