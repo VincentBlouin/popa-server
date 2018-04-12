@@ -109,4 +109,10 @@ router.post(
   TransactionController.anonymousTransaction
 )
 
+router.post(
+  '/transaction/fund',
+  isAdmin,
+  TransactionController.addFund
+)
+
 module.exports = router
