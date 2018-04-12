@@ -48,6 +48,20 @@ const TransactionController = {
       res.send(transaction)
     })
   },
+  transactionDetails (req, res) {
+    const transactionId = parseInt(req.params['transactionId'])
+    TransactionItems.findAll({
+      where: {
+        TransactionId: transactionId
+      },
+      include: [{
+        model: Products,
+        attributes: ['name', 'format']
+      }]
+    }).then(function (transactionItems) {
+      res.send(transactionItems)
+    })
+  },
   anonymousTransaction (req, res) {
     return TransactionController._transaction(
       req.body
@@ -103,8 +117,13 @@ const TransactionController = {
             latestUserTransaction.balance - totalPrice
           ).toFixed(2)
         }
-        return Transactions.create(newTransaction, {
+        user.balance = newTransaction.balance
+        return user.save({
           transaction: t
+        }).then(function () {
+          return Transactions.create(newTransaction, {
+            transaction: t
+          })
         }).then(function (_transaction) {
           transaction = _transaction
           return Promise.all(items.map(function (item) {

@@ -9,7 +9,7 @@
       "dialect" : "sqlite",
       "host": "localhost",
       "storage": "./popa.sqlite",
-      "logging": false
+      "logging": true
     }
   },
   "authentication":{

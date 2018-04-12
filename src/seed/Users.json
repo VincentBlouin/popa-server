@@ -22,7 +22,8 @@
     "firstName": "Mangeur",
     "lastName": "1",
     "locale": "fr",
-    "ardoiseIdentifier": "rabiole12"
+    "ardoiseIdentifier": "rabiole12",
+    "balance": "333.35"
   },
   {
     "email": "m2@popa.ca",
@@ -32,6 +33,87 @@
     "lastName": "2",
     "locale": "en",
     "ardoiseIdentifier": "cassis44"
+  },
+  {
+    "email": "m3@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "3",
+    "locale": "en",
+    "ardoiseIdentifier": "m3@popa.ca"
+  },
+  {
+    "email": "m4@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "4",
+    "locale": "en",
+    "ardoiseIdentifier": "m4@popa.ca"
+  },
+  {
+    "email": "m5@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "5",
+    "locale": "en",
+    "ardoiseIdentifier": "m5@popa.ca"
+  },
+  {
+    "email": "m6@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "6",
+    "locale": "en",
+    "ardoiseIdentifier": "m6@popa.ca"
+  },
+  {
+    "email": "m7@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "7",
+    "locale": "en",
+    "ardoiseIdentifier": "m7@popa.ca"
+  },
+  {
+    "email": "m8@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "8",
+    "locale": "en",
+    "ardoiseIdentifier": "m8@popa.ca"
+  },
+  {
+    "email": "m9@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "9",
+    "locale": "en",
+    "ardoiseIdentifier": "m9@popa.ca"
+  },
+  {
+    "email": "m10@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "10",
+    "locale": "en",
+    "ardoiseIdentifier": "m10@popa.ca"
+  },
+  {
+    "email": "m11@popa.ca",
+    "password": "12345678",
+    "status": "subscribed",
+    "firstName": "Mangeur",
+    "lastName": "11",
+    "locale": "en",
+    "ardoiseIdentifier": "m11@popa.ca"
   },
   {
     "email": "vincent.blouin@gmail.com",

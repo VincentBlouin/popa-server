@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     ardoiseIdentifier: {
       type: DataTypes.STRING,
       unique: true
-    }
+    },
+    balance: DataTypes.DOUBLE
   }, {
     hooks: {
       beforeCreate: hashPassword,
@@ -39,6 +40,9 @@ module.exports = (sequelize, DataTypes) => {
   })
   User.prototype.comparePassword = function (password) {
     return bcrypt.compareAsync(password, this.password)
+  }
+  User.defineAssociationsUsingModels = function (model, models) {
+    model.hasMany(models.Transactions)
   }
   return User
 }

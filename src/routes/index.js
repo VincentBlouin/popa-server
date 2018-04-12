@@ -5,7 +5,6 @@ const AuthenticationControllerPolicy = require('../policy/AuthenticationControll
 
 const UserController = require('../controller/UserController')
 
-const SubscriberController = require('../controller/SubscriberController')
 const TransactionController = require('../controller/TransactionController')
 
 const ProductController = require('../controller/ProductController')
@@ -14,7 +13,7 @@ const isAuthenticated = require('../policy/isAuthenticated')
 const isOwnerOrAdmin = require('../policy/isOwnerOrAdmin')
 const isArdoiseUser = require('../policy/isArdoiseUser')
 const isOwnerArdoiseUserOrAdmin = require('../policy/isOwnerArdoiseUserOrAdmin')
-// const isAdmin = require('../policy/isAdmin')
+const isAdmin = require('../policy/isAdmin')
 
 router.post(
   '/register',
@@ -58,9 +57,27 @@ router.post(
 )
 
 router.get(
-  '/subscribers',
-  isArdoiseUser,
-  SubscriberController.list
+  '/clients',
+  isAdmin,
+  UserController.clients
+)
+
+router.post(
+  '/clients',
+  isAdmin,
+  UserController.createClient
+)
+
+router.put(
+  '/clients',
+  isAdmin,
+  UserController.updateClient
+)
+
+router.get(
+  '/clients/:clientId',
+  isAdmin,
+  UserController.getClientDetails
 )
 
 router.get(
@@ -70,17 +87,22 @@ router.get(
 )
 
 router.get(
-  '/transaction/:ownerId',
+  '/:ownerId/transaction',
   isOwnerArdoiseUserOrAdmin,
   TransactionController.list
 )
 
 router.post(
-  '/transaction/:ownerId',
+  '/:ownerId/transaction',
   isOwnerArdoiseUserOrAdmin,
   TransactionController.subscriberTransaction
 )
 
+router.get(
+  '/:ownerId/transaction/:transactionId',
+  isOwnerArdoiseUserOrAdmin,
+  TransactionController.transactionDetails
+)
 router.post(
   '/transaction',
   isArdoiseUser,
