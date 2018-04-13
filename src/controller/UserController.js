@@ -39,7 +39,7 @@ module.exports = {
       where: {
         id: clientId
       },
-      attributes: ['id', 'email', 'firstName', 'lastName', 'status', 'balance', 'ardoiseIdentifier']
+      attributes: ['id', 'email', 'firstName', 'lastName', 'status', 'balance', 'ardoiseIdentifier', 'locale']
     }).then(function (client) {
       res.send(client)
     })
@@ -52,7 +52,8 @@ module.exports = {
       firstName: client.firstName,
       lastName: client.lastName,
       ardoiseIdentifier: client.ardoiseIdentifier,
-      status: client.status
+      status: client.status,
+      locale: client.locale
     }).then(function (client) {
       res.send(client)
     })
@@ -63,7 +64,8 @@ module.exports = {
       email: client.email,
       firstName: client.firstName,
       lastName: client.lastName,
-      ardoiseIdentifier: client.ardoiseIdentifier
+      ardoiseIdentifier: client.ardoiseIdentifier,
+      locale: client.locale
     }, {
       where: {
         id: client.id
