@@ -35,8 +35,8 @@ const TransactionController = {
       )
     }).then(function (_items) {
       items = _items.map(function (item) {
-        const rebate = parseFloat(item.totalPrice * REBATE_RATIO).toFixed(2)
-        item.totalPriceAfterRebate = parseFloat(item.totalPrice - rebate).toFixed(2)
+        const rebate = parseFloat(item.totalPrice * REBATE_RATIO)
+        item.totalPriceAfterRebate = parseFloat(item.totalPrice - rebate)
         item.rebates = [{
           amount: rebate,
           code: SUBSCRIBER_REBATE_CODE
@@ -73,7 +73,7 @@ const TransactionController = {
       req.body
     ).then(function (items) {
       items = items.map(function (item) {
-        item.totalPriceAfterRebate = parseFloat(item.totalPrice).toFixed(2)
+        item.totalPriceAfterRebate = parseFloat(item.totalPrice)
         return item
       })
       return TransactionController._transaction(
@@ -102,7 +102,7 @@ const TransactionController = {
     }).then(function (latestTransaction) {
       return TransactionController._transaction(
         [{
-          id: 1,
+          ProductId: 1,
           quantity: 1,
           unitPrice: amount * -1,
           totalPrice: amount * -1,
@@ -117,8 +117,8 @@ const TransactionController = {
   },
   _transaction (items, user, latestUserTransaction) {
     let transaction
-    const totalPrice = items.reduce(function (sum, item) {
-      return sum + item.totalPriceAfterRebate
+    let totalPrice = items.reduce(function (sum, item) {
+      return (sum) + (item.totalPriceAfterRebate)
     }, 0)
     return models.sequelize.transaction(function (t) {
       const newTransaction = {
@@ -137,7 +137,7 @@ const TransactionController = {
       } else {
         promise = Promise.resolve()
       }
-      promise.then(function () {
+      return promise.then(function () {
         return Transactions.create(newTransaction)
       }).then(function (_transaction) {
         transaction = _transaction
@@ -182,7 +182,8 @@ const TransactionController = {
       order: [['createdAt', 'DESC']],
       where: {
         UserId: user.id
-      }
+      },
+      attributes: ['balance']
     }).then(function (latestTransactions) {
       return latestTransactions.length ? latestTransactions[0] : {
         balance: 0
