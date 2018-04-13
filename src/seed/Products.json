@@ -68,6 +68,10 @@
       "fr": "Choux chinois",
       "en": "Chinese cabbage"
     },
+    "format": {
+      "fr": "",
+      "en": ""
+    },
     "description": {
       "fr": "Elle est voisine du bok choy (Brassica rapa L. subsp. chinensis), ou pak choï ou encore paksoy, lui aussi appelé chou chinois, aux côtes plus fournies et aux grandes feuilles vertes.",
       "en": "It is close to bok choy (Brassica rapa L. subsp. chinensis), or pak choï or paksoy, also called Chinese cabbage, with thicker ribs and large green leaves."
@@ -75,7 +79,7 @@
     "unitPrice": "2.5",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/ChineseCabbage.jpg",
     "nbInStock": 12,
-    "isAvailable": false,
+    "isAvailable": true,
     "type": "open"
   },
   {

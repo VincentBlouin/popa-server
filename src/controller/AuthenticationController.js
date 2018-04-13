@@ -93,7 +93,7 @@ module.exports = {
         'status': 'subscribed',
         'ardoiseIdentifier': ardoiseIdentifier
       },
-      attributes: ['id', 'firstName', 'lastName']
+      attributes: ['id', 'firstName', 'lastName', 'locale']
     }).then(function (user) {
       if (!user) {
         return res.status(403).send({

@@ -81,9 +81,33 @@ router.get(
 )
 
 router.get(
-  '/product',
+  '/available-product',
   isAuthenticated,
+  ProductController.listAvailable
+)
+
+router.get(
+  '/product',
+  isAdmin,
   ProductController.list
+)
+
+router.put(
+  '/product',
+  isAdmin,
+  ProductController.updateProduct
+)
+
+router.post(
+  '/product',
+  isAdmin,
+  ProductController.createProduct
+)
+
+router.get(
+  '/product/:productId',
+  isAuthenticated,
+  ProductController.getDetails
 )
 
 router.get(
