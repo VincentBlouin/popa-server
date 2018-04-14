@@ -1,9 +1,9 @@
 [
   {
-    "name": "Panier libre",
-    "unitPrice": "-350",
-    "nbInStock": -1,
-    "isAvailable": true,
+    "name": {
+      "fr": "Panier libre service",
+      "en": "Self-service basket"
+    },
     "type": "adminOnly"
   },
   {
