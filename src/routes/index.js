@@ -104,6 +104,17 @@ router.post(
   ProductController.createProduct
 )
 
+router.post(
+  '/product/image',
+  isAdmin,
+  ProductController.uploadImage
+)
+
+router.get(
+  '/product/image/:uuid',
+  ProductController.getImage
+)
+
 router.get(
   '/product/:productId',
   isAuthenticated,

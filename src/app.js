@@ -15,6 +15,8 @@ const {sequelize} = require('./model')
 
 const cors = require('cors')
 app.use(cors())
+const fileUpload = require('express-fileupload')
+app.use(fileUpload())
 app.use(bodyParser({limit: '50mb'}))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))

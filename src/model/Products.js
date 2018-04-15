@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     format: DataTypes.JSONB,
     description: DataTypes.JSONB,
     unitPrice: DataTypes.DOUBLE,
-    image: DataTypes.TEXT,
+    image: DataTypes.JSONB,
     nbInStock: DataTypes.INTEGER,
     isAvailable: DataTypes.BOOLEAN,
     type: DataTypes.STRING

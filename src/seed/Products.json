@@ -20,7 +20,11 @@
       "en": "Good to eat"
     },
     "unitPrice": "2.5",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Turnip_2622027.jpg",
+    "image": {
+      "originalName": "Turnip_2622027.jpg",
+      "fileName": "ad746a53-2983-40c6-834b-fb88e9b73ba5",
+      "mimetype": "image/jpeg"
+    },
     "nbInStock": 25,
     "isAvailable": true,
     "type": "open"
@@ -39,7 +43,11 @@
       "en": "Very sweet!"
     },
     "unitPrice": "3",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Daucus_Carota.jpg",
+    "image": {
+      "originalName": "Daucus_Carota.jpg",
+      "fileName": "9a6f4f49-49d5-4333-98b5-c52680a63477",
+      "mimetype": "image/jpeg"
+    },
     "nbInStock": 10,
     "isAvailable": true,
     "type": "open"
@@ -58,7 +66,11 @@
       "en": "typical cabbage in Quebec"
     },
     "unitPrice": "3",
-    "image": "http://allomaigrirvite.com/wp-content/uploads/2013/04/r%C3%A9gime-soupe-aux-choux.jpg",
+    "image": {
+      "originalName": "régime-soupe-aux-choux.jpg",
+      "fileName": "d6567b5c-ee89-474a-b702-4c416de631b6",
+      "mimetype": "image/jpeg"
+    },
     "nbInStock": 5,
     "isAvailable": false,
     "type": "open"
@@ -77,7 +89,11 @@
       "en": "It is close to bok choy (Brassica rapa L. subsp. chinensis), or pak choï or paksoy, also called Chinese cabbage, with thicker ribs and large green leaves."
     },
     "unitPrice": "2.5",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/ChineseCabbage.jpg",
+    "image": {
+      "originalName": "ChineseCabbage.jpg",
+      "fileName": "ec01b106-1fcc-4724-9fee-dbd97333d0ca",
+      "mimetype": "image/jpeg"
+    },
     "nbInStock": 12,
     "isAvailable": true,
     "type": "open"
@@ -96,7 +112,11 @@
       "en": "Succulent"
     },
     "unitPrice": "6",
-    "image": "https://www.promessedefleurs.com/media/catalog/product/cache/1/image/615x/9df78eab33525d08d6e5fb8d27136e95/T/o/Tomate-Supersweet-100-F1-4245-1_1.jpg",
+    "image": {
+      "originalName": "Tomate-Supersweet-100-F1-4245-1_1.jpg",
+      "fileName": "2c5112c2-03c0-4750-8ab2-1fdf2a6b088e",
+      "mimetype": "image/jpeg"
+    },
     "nbInStock": 10,
     "isAvailable": false,
     "type": "open"
@@ -114,8 +134,12 @@
       "fr": "Oui !",
       "en": "Yes !"
     },
+    "image": {
+      "originalName": "Tomatoes_plain_and_sliced.jpg",
+      "fileName": "3e2fea8a-8665-48d1-a77b-eb652b677c47",
+      "mimetype": "image/jpeg"
+    },
     "unitPrice": "4",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Tomatoes_plain_and_sliced.jpg",
     "nbInStock": 15,
     "isAvailable": false,
     "type": "open"
