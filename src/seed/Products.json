@@ -72,7 +72,7 @@
       "mimetype": "image/jpeg"
     },
     "nbInStock": 5,
-    "isAvailable": false,
+    "isAvailable": true,
     "type": "open"
   },
   {
@@ -118,7 +118,7 @@
       "mimetype": "image/jpeg"
     },
     "nbInStock": 10,
-    "isAvailable": false,
+    "isAvailable": true,
     "type": "open"
   },
   {
@@ -141,7 +141,30 @@
     },
     "unitPrice": "4",
     "nbInStock": 15,
-    "isAvailable": false,
+    "isAvailable": true,
+    "type": "open"
+  },
+  {
+    "name": {
+      "fr": "Betterave",
+      "en": "Beet"
+    },
+    "format": {
+      "fr": "En bunch",
+      "en": "In bunch"
+    },
+    "description": {
+      "fr": "Beet the system",
+      "en": "Beet the system"
+    },
+    "image": {
+      "originalName": "ZEk5bo1ya36JOVk9A1fDWduQAGI.gif",
+      "fileName": "59c2923b-2344-4dce-9a8d-039a87569d36",
+      "mimetype": "image/gif"
+    },
+    "unitPrice": "4",
+    "nbInStock": 15,
+    "isAvailable": true,
     "type": "open"
   }
 ]

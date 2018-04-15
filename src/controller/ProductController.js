@@ -96,8 +96,8 @@ module.exports = {
     })
   },
   getImage (req, res) {
-    const uuid = req.params['uuid']
-    const img = fs.readFileSync(IMAGE_BASE_PATH + '/thumb/' + uuid)
+    const secureFileName = req.params['uuid'].split('/').pop()
+    const img = fs.readFileSync(IMAGE_BASE_PATH + '/thumb/' + secureFileName)
     res.writeHead(200, {'Content-Type': 'image/jpg'})
     res.end(img, 'binary')
   }
