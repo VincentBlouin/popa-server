@@ -144,6 +144,12 @@ router.post(
   TransactionController.anonymousTransaction
 )
 
+router.get(
+  '/transactions/details',
+  isAdmin,
+  TransactionController.listAllDetails
+)
+
 router.post(
   '/transaction/fund',
   isAdmin,

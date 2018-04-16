@@ -20,6 +20,13 @@ const TransactionController = {
       res.send(transactions)
     })
   },
+  listAllDetails (req, res) {
+    return TransactionItems.findAll({
+      include: [Products]
+    }).then(function (transactionItems) {
+      res.send(transactionItems)
+    })
+  },
   subscriberTransaction (req, res) {
     let user
     const userId = parseInt(req.params['ownerId'])

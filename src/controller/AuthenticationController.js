@@ -47,6 +47,9 @@ module.exports = {
   },
   login (req, res) {
     const {email, password} = req.body
+    if (password.trim() === '') {
+      return res.status(403)
+    }
     let user
     return Users.findOne({
       where: {
