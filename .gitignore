@@ -1,3 +1,4 @@
 node_modules
 popa.sqlite
 .idea
+src/config/development.json
