@@ -1,6 +1,6 @@
 {
   "useMinify": false,
-  "baseUrl": "https://ardoise.potagerspartages.ca",
+  "baseUrl": "https://app.potagerspartages.ca",
   "db": {
     "database": "popa",
     "user": "popa",
