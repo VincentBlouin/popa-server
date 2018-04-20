@@ -6,7 +6,7 @@ const sprintf = require('sprintf-js').sprintf
 const EmailClient = require('../EmailClient')
 
 const resetPasswordEn = {
-  from: 'noreply@mindstack.io',
+  from: 'noreply@app.potagerspartages.ca',
   subject: 'Change your password',
   content: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.<br><br>' +
   'Please click on the following link, or paste this into your browser to continue the process:<br><br>' +
@@ -15,7 +15,7 @@ const resetPasswordEn = {
 }
 
 const resetPasswordFr = {
-  from: 'nepasrepondre@mindstack.io',
+  from: 'nepasrepondre@app.potagerspartages.ca',
   subject: 'Modifier votre mot de passe',
   content: 'Vous reçevez ce courriel, parce que vous (ou quelqu\'un d\'autre) a demandé la réinitialisation du mot de passe de votre compte.<br><br>' +
   'Cliquez sur le lien suivant, ou coller le dans votre navigateur pour poursuivre le processus:<br><br>' +
@@ -47,7 +47,7 @@ module.exports = {
   },
   login (req, res) {
     const {email, password} = req.body
-    if (password.trim() === '') {
+    if (!password || password.trim() === '') {
       return res.status(403)
     }
     let user
@@ -128,22 +128,14 @@ module.exports = {
         subject: emailText.subject,
         html: sprintf(emailText.content, config.getConfig().baseUrl, token)
       }
-      EmailClient.addEmailNumber(emailContent, locale, '9a86c537')
-      var promise = new Promise(function (resolve, reject) {
-        EmailClient.client.sendMail(emailContent, function (err, info) {
-          if (err) {
-            reject(err)
-          } else {
-            resolve(info.response)
-          }
-        })
-      })
-      return promise
+      EmailClient.addEmailNumber(emailContent, locale, '7401e739')
+      return EmailClient.send(emailContent)
     }).then(function () {
       res.sendStatus(200)
-    }).catch(function () {
+    }).catch(function (error) {
+      console.log(error)
       return res.status(500).send({
-        error: 'An error has occured trying to login'
+        error: 'An error has occured trying to send reset password'
       })
     })
   },
