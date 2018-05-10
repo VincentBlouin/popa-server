@@ -35,6 +35,7 @@ app.get('/status', (req, res) => {
 app.use(logger('dev'))
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
+  console.log(res)
   let err = new Error('Not Found')
   err.status = 404
   next(err)
