@@ -37,6 +37,9 @@ module.exports = {
   },
   createProduct (req, res) {
     const product = req.body
+    if (!product.nbInStock || product.nbInStock === '') {
+      product.nbInStock = 0
+    }
     return Products.create({
       name: product.name,
       image: product.image,
@@ -52,6 +55,9 @@ module.exports = {
   },
   updateProduct (req, res) {
     const product = req.body
+    if (!product.nbInStock || product.nbInStock === '') {
+      product.nbInStock = 0
+    }
     return Products.update({
       name: product.name,
       image: product.image,
