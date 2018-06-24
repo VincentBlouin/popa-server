@@ -190,7 +190,7 @@ const TransactionController = {
       where: {
         UserId: user.id
       },
-      attributes: ['balance']
+      attributes: ['balance', 'createdAt']
     }).then(function (latestTransactions) {
       return latestTransactions.length ? latestTransactions[0] : {
         balance: 0

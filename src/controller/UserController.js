@@ -1,4 +1,5 @@
 const {Users} = require('../model')
+const TransactionController = require('./TransactionController')
 
 module.exports = {
   changeLocale (req, res) {
@@ -29,6 +30,18 @@ module.exports = {
         }
       },
       attributes: ['id', 'firstName', 'lastName', 'status', 'balance', 'createdAt']
+    }).then(function (subscribers) {
+      return Promise.all(
+        subscribers.map(function (subscriber) {
+          return TransactionController._getUserLatestTransaction(
+            subscriber
+          ).then(function (latestTransaction) {
+            subscriber.latestTransaction = latestTransaction
+          })
+        })
+      ).then(function () {
+        return subscribers
+      })
     }).then(function (subscribers) {
       res.send(subscribers)
     })
