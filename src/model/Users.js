@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
       unique: true
     },
     balance: DataTypes.DOUBLE,
-    latestTransaction: DataTypes.VIRTUAL
+    latestTransaction: DataTypes.DATE
   }, {
     hooks: {
       beforeCreate: hashPassword,

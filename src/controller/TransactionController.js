@@ -1,3 +1,9 @@
+const BASKET_PRODUCT_ID = 1
+const PENALTY_PRODUCT_ID = 2
+const adminOnlyProducts = [
+  BASKET_PRODUCT_ID,
+  PENALTY_PRODUCT_ID
+]
 const models = require('../model')
 const {
   Transactions,
@@ -109,11 +115,43 @@ const TransactionController = {
     }).then(function (latestTransaction) {
       return TransactionController._transaction(
         [{
-          ProductId: 1,
+          ProductId: BASKET_PRODUCT_ID,
           quantity: 1,
           unitPrice: amount * -1,
           totalPrice: amount * -1,
           totalPriceAfterRebate: amount * -1
+        }],
+        user,
+        latestTransaction
+      )
+    }).then(function (transaction) {
+      res.send(transaction)
+    })
+  },
+  addPenaltyFee (req, res) {
+    const amount = req.body.amount
+    const subscriberId = req.body.subscriberId
+    if (!amount || !subscriberId) {
+      return res.sendStatus(400)
+    }
+    let user
+    Users.findOne({
+      where: {
+        id: subscriberId
+      }
+    }).then(function (_user) {
+      user = _user
+      return TransactionController._getUserLatestTransaction(
+        user
+      )
+    }).then(function (latestTransaction) {
+      return TransactionController._transaction(
+        [{
+          ProductId: PENALTY_PRODUCT_ID,
+          quantity: 1,
+          unitPrice: amount,
+          totalPrice: amount,
+          totalPriceAfterRebate: amount
         }],
         user,
         latestTransaction
@@ -140,6 +178,13 @@ const TransactionController = {
       if (user) {
         newTransaction.UserId = user.id
         user.balance = newTransaction.balance
+        console.log('items')
+        console.log(items)
+        console.log('TransactionController._areItemsAdminOnly(items)')
+        console.log(TransactionController._areItemsAdminOnly(items))
+        if (!TransactionController._areItemsAdminOnly(items)) {
+          user.latestTransaction = new Date()
+        }
         promise = user.save()
       } else {
         promise = Promise.resolve()
@@ -195,6 +240,11 @@ const TransactionController = {
       return latestTransactions.length ? latestTransactions[0] : {
         balance: 0
       }
+    })
+  },
+  _areItemsAdminOnly: function (items) {
+    return items.every(function (item) {
+      return adminOnlyProducts.indexOf(item.ProductId) >= 0
     })
   }
 }

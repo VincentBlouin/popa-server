@@ -8,6 +8,13 @@
   },
   {
     "name": {
+      "fr": "Frais d'absence de transactions",
+      "en": "No Transaction Fees"
+    },
+    "type": "adminOnly"
+  },
+  {
+    "name": {
       "fr": "Rabiole",
       "en": "Rabish"
     },

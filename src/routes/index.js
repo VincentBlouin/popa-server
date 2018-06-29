@@ -156,4 +156,10 @@ router.post(
   TransactionController.addFund
 )
 
+router.post(
+  '/transaction/penalty',
+  isAdmin,
+  TransactionController.addPenaltyFee
+)
+
 module.exports = router
