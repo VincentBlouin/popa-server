@@ -15,6 +15,29 @@
   },
   {
     "name": {
+      "fr": "Concombre (Long)",
+      "en": "Long Cucumber"
+    },
+    "format": {
+      "fr": "unitaire",
+      "en": "unitaire"
+    },
+    "description": {
+      "fr": "",
+      "en": ""
+    },
+    "unitPrice": "3",
+    "image": {
+      "originalName": "Daucus_Carota.jpg",
+      "fileName": "9a6f4f49-49d5-4333-98b5-c52680a63477",
+      "mimetype": "image/jpeg"
+    },
+    "nbInStock": 10,
+    "isAvailable": true,
+    "type": "open"
+  },
+  {
+    "name": {
       "fr": "Rabiole",
       "en": "Rabish"
     },
