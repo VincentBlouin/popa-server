@@ -27,12 +27,13 @@ module.exports = (sequelize, DataTypes) => {
     lastName: DataTypes.STRING,
     status: DataTypes.STRING,
     locale: DataTypes.STRING,
+    latestTransaction: DataTypes.DATE,
     ardoiseIdentifier: {
       type: DataTypes.STRING,
       unique: true
     },
     balance: DataTypes.DOUBLE,
-    latestTransaction: DataTypes.DATE
+    hasRebate: DataTypes.BOOLEAN
   }, {
     hooks: {
       beforeCreate: hashPassword,

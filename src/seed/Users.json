@@ -5,7 +5,8 @@
     "status": "admin",
     "firstName": "Ad",
     "lastName": "Min",
-    "locale": "fr"
+    "locale": "fr",
+    "latestTransaction": "2018-07-13 18:40:04.112-05"
   },
   {
     "email": "ardoise1@popa.ca",
@@ -22,8 +23,9 @@
     "firstName": "Mangeur",
     "lastName": "1",
     "locale": "fr",
-    "ardoiseIdentifier": "rabiole12",
-    "balance": "333.35"
+    "ardoiseIdentifier": "rabiole",
+    "balance": "333.35",
+    "hasRebate": true
   },
   {
     "email": "m2@popa.ca",
@@ -32,7 +34,8 @@
     "firstName": "Mangeur",
     "lastName": "2",
     "locale": "en",
-    "ardoiseIdentifier": "cassis44"
+    "ardoiseIdentifier": "cassis",
+    "hasRebate": false
   },
   {
     "email": "m3@popa.ca",

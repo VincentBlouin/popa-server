@@ -30,9 +30,9 @@
     "nodemon": "^1.17.1",
     "passport": "^0.4.0",
     "passport-jwt": "^3.0.1",
-    "sequelize": "^4.37.6",
+    "sequelize": "^4.38.0",
     "sprintf-js": "^1.1.1",
-    "sqlite3": "^4.0.0",
+    "sqlite3": "^4.0.2",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
     "uuid": "^3.2.1"

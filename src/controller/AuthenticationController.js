@@ -57,7 +57,7 @@ module.exports = {
       }
     }).then(function (_user) {
       user = _user
-      if (!user) {
+      if (user === null) {
         return res.status(403).send({
           error: 'Login information is incorrect'
         })
@@ -75,7 +75,8 @@ module.exports = {
           firstName: user.firstName,
           lastName: user.lastName,
           email: user.email,
-          status: user.status
+          status: user.status,
+          hasRebate: user.hasRebate
         },
         token: jwtSignUser(user.toJSON())
       })
@@ -96,7 +97,7 @@ module.exports = {
         'status': 'subscribed',
         'ardoiseIdentifier': ardoiseIdentifier
       },
-      attributes: ['id', 'firstName', 'lastName', 'locale']
+      attributes: ['id', 'firstName', 'lastName', 'locale', 'hasRebate']
     }).then(function (user) {
       if (!user) {
         return res.status(403).send({
