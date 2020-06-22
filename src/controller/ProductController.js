@@ -1,5 +1,5 @@
 const IMAGE_WIDTH = 500
-const IMAGE_BASE_PATH = '/var/lib/popa/image'
+const IMAGE_BASE_PATH = '/home/app.potagerspartages/var/lib/popa/image'
 const {Products} = require('../model')
 const uuid = require('uuid')
 const imageMagick = require('imagemagick')
