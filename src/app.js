@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 require('./passport')
 
 const routes = require('./routes/index')
-app.use('/', routes)
+app.use('/api', routes)
 
 app.get('/status', (req, res) => {
   res.send({
