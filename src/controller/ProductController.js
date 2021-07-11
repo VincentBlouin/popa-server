@@ -93,7 +93,7 @@ module.exports = {
             }
             sharp(fullSizeImagePath).resize(
                 IMAGE_WIDTH
-            ).toFile(IMAGE_BASE_PATH + '/thumb_' + imageInfo.fileName, (err, info) => {
+            ).toFile(IMAGE_BASE_PATH + '/thumb/' + imageInfo.fileName, (err, info) => {
                     if (err) {
                         throw err
                     }
