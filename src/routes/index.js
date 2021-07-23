@@ -16,150 +16,162 @@ const isOwnerArdoiseUserOrAdmin = require('../policy/isOwnerArdoiseUserOrAdmin')
 const isAdmin = require('../policy/isAdmin')
 
 router.post(
-  '/register',
-  AuthenticationControllerPolicy.register,
-  AuthenticationController.register
+    '/register',
+    AuthenticationControllerPolicy.register,
+    AuthenticationController.register
 )
 router.post(
-  '/login',
-  AuthenticationController.login
-)
-
-router.post(
-  '/login/ardoise',
-  AuthenticationController.ardoiseLogin
+    '/login',
+    AuthenticationController.login
 )
 
 router.post(
-  '/reset-password',
-  AuthenticationController.resetPassword
+    '/login/ardoise',
+    AuthenticationController.ardoiseLogin
 )
 
 router.post(
-  '/token-valid',
-  AuthenticationController.isTokenValid
+    '/reset-password',
+    AuthenticationController.resetPassword
 )
 
 router.post(
-  '/change-password',
-  AuthenticationController.changePassword
+    '/token-valid',
+    AuthenticationController.isTokenValid
 )
 
 router.post(
-  '/email-exists',
-  AuthenticationController.emailExists
+    '/change-password',
+    AuthenticationController.changePassword
 )
 
 router.post(
-  '/user/:ownerId/locale',
-  isOwnerOrAdmin,
-  UserController.changeLocale
+    '/email-exists',
+    AuthenticationController.emailExists
+)
+
+router.post(
+    '/user/:ownerId/locale',
+    isOwnerOrAdmin,
+    UserController.changeLocale
 )
 
 router.get(
-  '/clients',
-  isAdmin,
-  UserController.clients
+    '/clients',
+    isAdmin,
+    UserController.clients
 )
 
 router.post(
-  '/clients',
-  isAdmin,
-  UserController.createClient
+    '/clients',
+    isAdmin,
+    UserController.createClient
 )
 
 router.put(
-  '/clients',
-  isAdmin,
-  UserController.updateClient
+    '/clients',
+    isAdmin,
+    UserController.updateClient
 )
 
 router.get(
-  '/clients/:clientId',
-  isAdmin,
-  UserController.getClientDetails
+    '/clients/:clientId',
+    isAdmin,
+    UserController.getClientDetails
 )
 
 router.get(
-  '/available-product',
-  isAuthenticated,
-  ProductController.listAvailable
+    '/available-product',
+    isAuthenticated,
+    ProductController.listAvailable
 )
 
 router.get(
-  '/product',
-  isAdmin,
-  ProductController.list
+    '/product',
+    isAdmin,
+    ProductController.list
 )
 
 router.put(
-  '/product',
-  isAdmin,
-  ProductController.updateProduct
+    '/product',
+    isAdmin,
+    ProductController.updateProduct
+)
+
+router.put(
+    '/product/availability',
+    isAdmin,
+    ProductController.updateProductAvailability
+)
+
+router.put(
+    '/product/price',
+    isAdmin,
+    ProductController.updateProductPrice
 )
 
 router.post(
-  '/product',
-  isAdmin,
-  ProductController.createProduct
+    '/product',
+    isAdmin,
+    ProductController.createProduct
 )
 
 router.post(
-  '/product/image',
-  isAdmin,
-  ProductController.uploadImage
+    '/product/image',
+    isAdmin,
+    ProductController.uploadImage
 )
 
 router.get(
-  '/product/image/:uuid',
-  ProductController.getImage
+    '/product/image/:uuid',
+    ProductController.getImage
 )
 
 router.get(
-  '/product/:productId',
-  isAuthenticated,
-  ProductController.getDetails
+    '/product/:productId',
+    isAuthenticated,
+    ProductController.getDetails
 )
 
 router.get(
-  '/:ownerId/transaction',
-  isOwnerArdoiseUserOrAdmin,
-  TransactionController.list
+    '/:ownerId/transaction',
+    isOwnerArdoiseUserOrAdmin,
+    TransactionController.list
 )
 
 router.post(
-  '/:ownerId/transaction',
-  isOwnerArdoiseUserOrAdmin,
-  TransactionController.subscriberTransaction
+    '/:ownerId/transaction',
+    isOwnerArdoiseUserOrAdmin,
+    TransactionController.subscriberTransaction
 )
 
 router.get(
-  '/:ownerId/transaction/:transactionId',
-  isOwnerArdoiseUserOrAdmin,
-  TransactionController.transactionDetails
+    '/:ownerId/transaction/:transactionId',
+    isOwnerArdoiseUserOrAdmin,
+    TransactionController.transactionDetails
 )
 router.post(
-  '/transaction',
-  isArdoiseUser,
-  TransactionController.anonymousTransaction
+    '/transaction',
+    isArdoiseUser,
+    TransactionController.anonymousTransaction
 )
 
 router.get(
-  '/transactions/details',
-  isAdmin,
-  TransactionController.listAllDetails
+    '/transactions/details',
+    isAdmin,
+    TransactionController.listAllDetails
 )
 
 router.post(
-  '/transaction/fund',
-  isAdmin,
-  TransactionController.addFund
+    '/transaction/fund',
+    isAdmin,
+    TransactionController.addFund
 )
 
 router.post(
-  '/transaction/penalty',
-  isAdmin,
-  TransactionController.addPenaltyFee
+    '/transaction/penalty',
+    isAdmin,
+    TransactionController.addPenaltyFee
 )
 
 module.exports = router

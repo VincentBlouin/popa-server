@@ -75,6 +75,30 @@ module.exports = {
             res.send(product)
         })
     },
+    updateProductAvailability(req, res) {
+        const product = req.body
+        Products.update({
+            isAvailable: product.isAvailable
+        }, {
+            where: {
+                id: product.id
+            }
+        }).then(function (product) {
+            res.send(product)
+        })
+    },
+    updateProductPrice(req, res) {
+        const product = req.body
+        Products.update({
+            unitPrice: product.unitPrice
+        }, {
+            where: {
+                id: product.id
+            }
+        }).then(function (product) {
+            res.send(product)
+        })
+    },
     uploadImage(req, res) {
         if (!req.files || !req.files.photos) {
             return res.status(400).send('No files were uploaded.')
