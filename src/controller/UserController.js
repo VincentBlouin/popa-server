@@ -28,7 +28,7 @@ module.exports = {
           ]
         }
       },
-      attributes: ['id', 'firstName', 'lastName', 'status', 'balance', 'createdAt', 'latestTransaction']
+      attributes: ['id', 'firstName', 'lastName', 'status', 'balance', 'createdAt', 'latestTransaction', 'ardoiseIdentifier']
     }).then(function (subscribers) {
       res.send(subscribers)
     })
