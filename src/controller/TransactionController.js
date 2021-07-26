@@ -48,16 +48,16 @@ const TransactionController = {
       )
     }).then(function (_items) {
       items = _items.map(function (item) {
-        if (user.hasRebate) {
-          const rebate = parseFloat(item.totalPrice * REBATE_RATIO)
-          item.totalPriceAfterRebate = parseFloat(item.totalPrice - rebate)
-          item.rebates = [{
-            amount: rebate,
-            code: SUBSCRIBER_REBATE_CODE
-          }]
-        } else {
-          item.totalPriceAfterRebate = parseFloat(item.totalPrice)
-        }
+        // if (user.hasRebate) {
+        // const rebate = parseFloat(item.totalPrice * REBATE_RATIO)
+        // item.totalPriceAfterRebate = parseFloat(item.totalPrice - rebate)
+        // item.rebates = [{
+        //   amount: rebate,
+        //   code: SUBSCRIBER_REBATE_CODE
+        // }]
+        // } else {
+        item.totalPriceAfterRebate = parseFloat(item.totalPrice)
+        // }
         return item
       })
       return TransactionController._getUserLatestTransaction(
