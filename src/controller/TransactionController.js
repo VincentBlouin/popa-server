@@ -44,7 +44,12 @@ const TransactionController = {
         endOfYear.setHours(23, 59, 59);
 
         return TransactionItems.findAll({
-            include: [Products],
+            include: [
+                Products,
+                {
+                    model: Transactions,
+                    attributes: ['id', 'UserId']
+                }],
             where: {
                 'updatedAt': {
                     [Op.between]: [beginningOfYear, endOfYear],
@@ -53,6 +58,25 @@ const TransactionController = {
         }).then(function (transactionItems) {
             res.send(transactionItems)
         })
+    },
+    async removeTransactionItem(req, res) {
+        const transactionItemId = parseInt(req.params['transactionItemId'])
+        const transactionItem = TransactionItems.findOne({
+            where: {
+                id: transactionItemId,
+                include: [
+                    {
+                        model: Transactions,
+                        attributes: ['id', 'UserId']
+                    }],
+            }
+        });
+        if (transactionItem.Transaction.UserId === null) {
+            transactionItem.destroy();
+            res.sendStatus(200);
+        } else {
+            res.sendStatus(401);
+        }
     },
     subscriberTransaction(req, res) {
         let user

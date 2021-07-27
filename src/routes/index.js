@@ -162,6 +162,12 @@ router.get(
     TransactionController.listAllDetails
 )
 
+router.delete(
+    '/transaction-item/:transactionItemId',
+    isAdmin,
+    TransactionController.removeTransactionItem
+)
+
 router.post(
     '/transaction/fund',
     isAdmin,

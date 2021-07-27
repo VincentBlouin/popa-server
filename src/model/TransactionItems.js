@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
         totalPriceAfterRebate: DataTypes.DOUBLE,
         rebates: DataTypes.JSON
     }, {
+        paranoid: true,
         indexes: [{
             fields: ['updatedAt']
         }]
