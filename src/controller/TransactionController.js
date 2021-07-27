@@ -59,20 +59,20 @@ const TransactionController = {
             res.send(transactionItems)
         })
     },
-    async removeTransactionItem(req, res) {
-        const transactionItemId = parseInt(req.params['transactionItemId'])
-        const transactionItem = TransactionItems.findOne({
+    async removeTransaction(req, res) {
+        const transactionId = parseInt(req.params['transactionId'])
+        const transaction = await Transactions.findOne({
             where: {
-                id: transactionItemId,
-                include: [
-                    {
-                        model: Transactions,
-                        attributes: ['id', 'UserId']
-                    }],
+                id: transactionId
             }
         });
-        if (transactionItem.Transaction.UserId === null) {
-            transactionItem.destroy();
+        if (transaction.UserId === null) {
+            await TransactionItems.destroy({
+                where: {
+                    TransactionId: transactionId
+                }
+            })
+            await transaction.destroy();
             res.sendStatus(200);
         } else {
             res.sendStatus(401);

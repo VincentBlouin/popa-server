@@ -163,9 +163,9 @@ router.get(
 )
 
 router.delete(
-    '/transaction-item/:transactionItemId',
+    '/transaction/:transactionId',
     isAdmin,
-    TransactionController.removeTransactionItem
+    TransactionController.removeTransaction
 )
 
 router.post(
